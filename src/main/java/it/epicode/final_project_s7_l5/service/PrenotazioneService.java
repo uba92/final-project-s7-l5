@@ -40,6 +40,10 @@ public class PrenotazioneService {
             throw new EntityExistsException("L'utente ha già una prenotazione per questo evento");
         }
 
+        if (evento.getPrenotazioni().size() >= evento.getNumeroPosti()) {
+            throw new EntityExistsException("Il numero massimo di posti per questo evento è stato raggiunto");
+        }
+
         Prenotazione prenotazione = new Prenotazione();
         prenotazione.setUtente(utente);
         prenotazione.setEvento(evento);
