@@ -17,4 +17,5 @@ public class EventoResponse {
     private Date dataEvento;
     private String luogo;
     private int numeroPosti;
+    private String nomeOrganizzatore;
 }

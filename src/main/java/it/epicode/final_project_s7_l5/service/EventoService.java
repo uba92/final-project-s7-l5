@@ -1,5 +1,6 @@
 package it.epicode.final_project_s7_l5.service;
 
+import it.epicode.final_project_s7_l5.entities.AppUser;
 import it.epicode.final_project_s7_l5.entities.Evento;
 import it.epicode.final_project_s7_l5.repository.EventoRepository;
 import it.epicode.final_project_s7_l5.request.EventoRequest;
@@ -19,8 +20,14 @@ public class EventoService {
     @Autowired
     private EventoRepository eventoRepository;
 
+    @Autowired
+    private AppUserService appUserService;
+
     //creazione di un nuovo evento
     public ResponseEntity<String> createEvento(EventoRequest eventoRequest) {
+
+        AppUser organizzatore = appUserService.findByUsername(eventoRequest.getNomeOrganizzatore()).get();
+
         if(eventoRepository.existsByTitolo(eventoRequest.getTitolo())) {
             throw new EntityExistsException("Evento con titolo: " + eventoRequest.getTitolo() + " già esistente");
         } else if (eventoRepository.existsByLuogoAndDataEvento(eventoRequest.getLuogo(), eventoRequest.getDataEvento())) {
@@ -32,6 +39,7 @@ public class EventoService {
             response.setDataEvento(eventoRequest.getDataEvento());
             response.setLuogo(eventoRequest.getLuogo());
             response.setNumeroPosti(eventoRequest.getNumeroPosti());
+            response.setOrganizzatore(organizzatore);
             eventoRepository.save(response);
             return ResponseEntity.ok("Evento creato con successo");
         }

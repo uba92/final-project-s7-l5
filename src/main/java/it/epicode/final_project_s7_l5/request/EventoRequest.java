@@ -12,4 +12,5 @@ public class EventoRequest {
     private Date dataEvento;
     private String luogo;
     private int numeroPosti;
+    private String nomeOrganizzatore;
 }
