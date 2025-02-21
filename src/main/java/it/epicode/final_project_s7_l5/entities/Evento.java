@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "eventi")
@@ -32,6 +33,9 @@ public class Evento {
 
     @Column(nullable = false)
     private int numeroPosti;
+
+    @OneToMany
+    private List<Prenotazione> prenotazioni;
 
     @ManyToOne
     private AppUser organizzatore;
