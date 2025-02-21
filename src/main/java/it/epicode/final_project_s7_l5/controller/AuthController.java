@@ -1,5 +1,10 @@
-package it.epicode.final_project_s7_l5.security.auth;
+package it.epicode.final_project_s7_l5.controller;
 
+import it.epicode.final_project_s7_l5.response.AuthResponse;
+import it.epicode.final_project_s7_l5.request.LoginRequest;
+import it.epicode.final_project_s7_l5.request.RegisterRequest;
+import it.epicode.final_project_s7_l5.enums.Role;
+import it.epicode.final_project_s7_l5.service.AppUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

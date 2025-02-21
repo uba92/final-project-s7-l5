@@ -1,5 +1,9 @@
-package it.epicode.final_project_s7_l5.security.auth;
+package it.epicode.final_project_s7_l5.service;
 
+import it.epicode.final_project_s7_l5.entities.AppUser;
+import it.epicode.final_project_s7_l5.repository.AppUserRepository;
+import it.epicode.final_project_s7_l5.security.auth.JwtTokenUtil;
+import it.epicode.final_project_s7_l5.enums.Role;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

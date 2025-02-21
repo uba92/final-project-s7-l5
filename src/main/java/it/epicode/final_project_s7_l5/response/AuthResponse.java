@@ -1,4 +1,4 @@
-package it.epicode.final_project_s7_l5.security.auth;
+package it.epicode.final_project_s7_l5.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

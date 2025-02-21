@@ -1,5 +1,6 @@
-package it.epicode.final_project_s7_l5.security.auth;
+package it.epicode.final_project_s7_l5.entities;
 
+import it.epicode.final_project_s7_l5.enums.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;

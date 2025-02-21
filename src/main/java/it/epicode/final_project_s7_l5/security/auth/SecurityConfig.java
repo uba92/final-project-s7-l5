@@ -1,5 +1,6 @@
 package it.epicode.final_project_s7_l5.security.auth;
 
+import it.epicode.final_project_s7_l5.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,6 +1,7 @@
-package it.epicode.final_project_s7_l5.security.auth;
+package it.epicode.final_project_s7_l5.exceptions;
 
 
+import it.epicode.final_project_s7_l5.security.auth.JwtTokenMissingException;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolation;

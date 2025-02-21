@@ -1,4 +1,4 @@
-package it.epicode.final_project_s7_l5.security.auth;
+package it.epicode.final_project_s7_l5.enums;
 
 public enum Role {
     ROLE_USER,

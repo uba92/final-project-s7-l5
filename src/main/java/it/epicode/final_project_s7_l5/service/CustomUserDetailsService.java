@@ -1,5 +1,7 @@
-package it.epicode.final_project_s7_l5.security.auth;
+package it.epicode.final_project_s7_l5.service;
 
+import it.epicode.final_project_s7_l5.entities.AppUser;
+import it.epicode.final_project_s7_l5.repository.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

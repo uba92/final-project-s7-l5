@@ -1,5 +1,8 @@
-package it.epicode.final_project_s7_l5.security.auth;
+package it.epicode.final_project_s7_l5.runner;
 
+import it.epicode.final_project_s7_l5.entities.AppUser;
+import it.epicode.final_project_s7_l5.enums.Role;
+import it.epicode.final_project_s7_l5.service.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

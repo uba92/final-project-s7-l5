@@ -1,6 +1,7 @@
 package it.epicode.final_project_s7_l5.security.auth;
 
 import io.jsonwebtoken.ExpiredJwtException;
+import it.epicode.final_project_s7_l5.service.CustomUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
